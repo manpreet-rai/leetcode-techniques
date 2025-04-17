@@ -63,10 +63,10 @@ public class MaximumSumSubarray {
 ### Mermaid Diagram
 ```mermaid
 flowchart LR
-    A[Start of Array] -->|Fixed Size K|> B[Window]
+    A[Start of Array] -- |Fixed Size K| --> B[Window]
     B --> C{Slide Window}
-    C -->|Yes|> D[Update Window Sum and Max Sum]
-    C -->|No|> E[End of Array]
+    C -- |Yes| --> D[Update Window Sum and Max Sum]
+    C -- |No| --> E[End of Array]
     D --> C
     style B fill:#f9f,stroke:#333,stroke-width:4px
 ```
