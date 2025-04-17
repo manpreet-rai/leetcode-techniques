@@ -61,17 +61,14 @@ public class MaximumSumSubarray {
 ```
 
 ### Mermaid Diagram
-Here's a simple mermaid diagram to illustrate the Sliding Window technique:
 ```mermaid
-graph LR
-    A[Start of Array] --> B[Window Start]
-    B --> C[Window End]
-    C --> D[End of Array]
+flowchart LR
+    A[Start of Array] -->|Fixed Size K|> B[Window]
+    B --> C{Slide Window}
+    C -->|Yes|> D[Update Window Sum and Max Sum]
+    C -->|No|> E[End of Array]
+    D --> C
     style B fill:#f9f,stroke:#333,stroke-width:4px
-    style C fill:#f9f,stroke:#333,stroke-width:4px
-    note "Window Size: K"
-    note "Slide Window to the right"
-    note "Update Window Sum and Max Sum"
 ```
 
 ### Tips and Variations
